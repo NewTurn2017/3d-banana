@@ -1,0 +1,5 @@
+
+{
+  "name": "Gemini 3D Character Multi-Shot Generator",
+  "description": "An application that uses a 3D composition tool to guide the Gemini API in generating multiple, angle-consistent images of a user-uploaded character, ensuring visual integrity across different shots."
+}
