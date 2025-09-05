@@ -52,16 +52,16 @@ async function generateSingleImage(characterImageBase64: string, characterImageT
     const compositionPart = fileToGenerativePart(compositionImageBase64.split(',')[1], 'image/png');
     
     const response = await ai.models.generateContent({
-        model: 'gemini-2.0-flash-exp',
+        model: 'gemini-2.5-flash-image-preview',
         contents: {
             parts: [
+                { text: DETAILED_PROMPT },
                 characterPart,
                 compositionPart,
-                { text: DETAILED_PROMPT },
             ],
         },
         config: {
-            responseModalities: [Modality.IMAGE],
+            responseModalities: [Modality.IMAGE, Modality.TEXT],
         },
     });
 
